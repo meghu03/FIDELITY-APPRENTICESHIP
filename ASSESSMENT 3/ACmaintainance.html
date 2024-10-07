@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="ACstyles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ac Maintenance Service</title>
+</head>
+<body>
+    <h1>AC Maintenance Service</h1>
+    <form id="acServiceForm">
+        <label for="customername">Customer Name:</label>
+        <input type="text" id="customerName" placeholder="Enter your name" required><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male"required>Male
+        <input type="radio" id="female" name="gender" value="Female"required>Female<br><br>
+
+        <label for="mobileNumber">Mobile Number:</label>
+        <input type="tel" id="mobilenumber" placeholder="Enter your mobile number" pattern="[789][0-9]{9}" required><br><br>
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" placeholder="Enter your email ID" required><br><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" rows="5" cols="25" placeholder="Enter your address" required></textarea><br><br>
+
+        <label for="acType">AC Type:</label>
+        <input list="acTypes" id="acType" placeholder="Choose your AC Type" required>
+        <datalist id="acTypes">
+            <option value="Split">
+            <option value="Window">
+            <option value="Centralized">   
+            <option value="Portable">
+        </datalist><br><br>
+
+        <label for="serviceType">Service Type:</label>
+        <select id="serviceType"required>
+            <option value="Cleaning">Cleaning</option>
+            <option value="Repair">Repair</option>
+            <option value="Gas Refill">Gas Refill</option>
+        </select><br><br>
+
+        <label for="dateForAppointment">Date of Appointment:</label>
+        <input type="date" id="dateForAppointment" name="dateForAppointment" placeholder="dd/mm/yyyy"required><br><br>
+
+        <label for="yearlymaintenance">Yearly Maintenance:</label>
+        <input type="checkbox" id="yearlyMaintenance">Select if required for yearly maintenance<br><br>
+
+        <label for="duration">Duration:</label>
+        <input type="range" id="duration" min="0" max="6" step="1" title="0 to 6 months"><br><br>
+
+        <input type="submit" value="Submit" id="submit">
+        <input type="reset" value="Clear" id="reset"><br><br>
+        </form>
+        <div id="result"></div>
+</body>
+</html>
